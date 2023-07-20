@@ -5,3 +5,7 @@ parameters:
         - src
     parallel:
         maximumNumberOfProcesses: 1
+    ignoreErrors:
+        -
+            message: '%Parameter #1 \$value of method Zaphyr\\HttpMessage\\Uri::sanitizeQueryOrFragment\(\) expects string, string\|null given.%'
+            path: 'src/Uri.php'

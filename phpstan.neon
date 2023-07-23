@@ -5,6 +5,7 @@ parameters:
         - src
     parallel:
         maximumNumberOfProcesses: 1
+    treatPhpDocTypesAsCertain: false
     ignoreErrors:
         -
             message: '%Parameter #1 \$value of method Zaphyr\\HttpMessage\\Uri::sanitizeQueryOrFragment\(\) expects string, string\|null given.%'

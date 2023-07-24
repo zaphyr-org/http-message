@@ -56,7 +56,6 @@ class UploadedFileTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        /** @phpstan-ignore-next-line */
         new UploadedFile(fopen('php://temp', 'wb+'), 0, $status);
     }
 
@@ -105,18 +104,6 @@ class UploadedFileTest extends TestCase
 
         self::assertSame($stream, (new UploadedFile($stream, 0, UPLOAD_ERR_OK))->getStream()->detach());
     }
-
-    /*public function testGetStreamReturnsStreamForFile(): void
-    {
-        $this->tempFile = $stream = (string)tempnam(sys_get_temp_dir(), 'zaphyr');
-        $upload = new UploadedFile($stream, 0, UPLOAD_ERR_OK);
-        $uploadStream = $upload->getStream();
-
-        $property = new ReflectionProperty($uploadStream, 'stream');
-        $property->setAccessible(true);
-
-        self::assertSame($stream, $property->getValue($uploadStream));
-    }*/
 
     public function testGetStreamCannotRetrieveMovedStream(): void
     {

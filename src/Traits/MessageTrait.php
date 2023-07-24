@@ -179,6 +179,7 @@ trait MessageTrait
     /**
      * @param string|string[] $value
      *
+     * @throws InvalidArgumentException
      * @return string[]
      */
     private function sanitizeHeaderValue(array|string $value): array
@@ -243,6 +244,7 @@ trait MessageTrait
     /**
      * @param array<string, string|string[]> $headers
      *
+     * @throws InvalidArgumentException
      * @return void
      */
     private function setHeaders(array $headers): void
@@ -299,6 +301,8 @@ trait MessageTrait
     {
         if ($body instanceof StreamInterface) {
             $this->body = $body;
+
+            return;
         }
 
         if (!is_string($body) && !is_resource($body)) {

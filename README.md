@@ -6,8 +6,8 @@
 
 # HTTP Message
 
-[PSR-7](https://www.php-fig.org/psr/psr-7) HTTP message implementation including
-[PSR-17](https://www.php-fig.org/psr/psr-17) HTTP factories.
+Lightweight and strict implementation of [PSR-7 HTTP Message](https://www.php-fig.org/psr/psr-7) including
+[PSR-17 HTTP Factories](https://www.php-fig.org/psr/psr-17).
 
 ## System Requirements
 

@@ -1,6 +1,6 @@
 {
     "name": "zaphyr-org/http-message",
-    "description": "PSR-7 HTTP message implementation including PSR-17 HTTP factories.",
+    "description": "Lightweight and strict implementation of PSR-7 HTTP Message including PSR-17 HTTP Factories.",
     "keywords": [
         "http",
         "http-message",

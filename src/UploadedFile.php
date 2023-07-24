@@ -29,21 +29,6 @@ class UploadedFile implements UploadedFileInterface
     ];
 
     /**
-     * @var string|null
-     */
-    private string|null $clientFilename;
-
-    /**
-     * @var string|null
-     */
-    private string|null $clientMediaType;
-
-    /**
-     * @var int
-     */
-    private int $error;
-
-    /**
      * @var string
      */
     private string $file = '';
@@ -52,11 +37,6 @@ class UploadedFile implements UploadedFileInterface
      * @var bool
      */
     private bool $moved = false;
-
-    /**
-     * @var int|null
-     */
-    private int|null $size;
 
     /**
      * @var StreamInterface|null
@@ -72,10 +52,10 @@ class UploadedFile implements UploadedFileInterface
      */
     public function __construct(
         $streamOrFile,
-        ?int $size,
-        int $error,
-        string $clientFilename = null,
-        string $clientMediaType = null
+        private readonly int|null $size,
+        private readonly int $error,
+        private readonly string|null $clientFilename = null,
+        private readonly string|null $clientMediaType = null
     ) {
         if ($error === UPLOAD_ERR_OK) {
             if (is_string($streamOrFile)) {
@@ -95,17 +75,11 @@ class UploadedFile implements UploadedFileInterface
             }
         }
 
-        $this->size = $size;
-
         if (0 > $error || 8 < $error) {
             throw new InvalidArgumentException(
                 'Invalid error status. Must be an UPLOAD_ERR_* constant'
             );
         }
-
-        $this->error = $error;
-        $this->clientFilename = $clientFilename;
-        $this->clientMediaType = $clientMediaType;
     }
 
     /**

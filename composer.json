@@ -33,6 +33,10 @@
         "psr/http-factory-implementation": "^1.0",
         "psr/http-message-implementation": "^2.0"
     },
+    "suggest": {
+        "zaphyr-org/http-client": "HTTP cURL client based on PSR-18.",
+        "zaphyr-org/http-emitter": "Emits PSR-7 responses to the PHP Server API."
+    },
     "autoload": {
         "psr-4": {
             "Zaphyr\\HttpMessage\\": "src/"

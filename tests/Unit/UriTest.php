@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HttpMessageTests;
+namespace Zaphyr\HttpMessageTests\Unit;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
@@ -45,13 +45,13 @@ class UriTest extends TestCase
     public function testGetScheme(): void
     {
         $uri = new Uri('https://example.com');
-        $this->assertEquals('https', $uri->getScheme());
+        self::assertEquals('https', $uri->getScheme());
     }
 
     public function testGetSchemeEmpty(): void
     {
         $uri = new Uri('');
-        $this->assertEquals('', $uri->getScheme());
+        self::assertEquals('', $uri->getScheme());
     }
 
     public function testWithSchemeReturnsNewInstance(): void
@@ -229,7 +229,7 @@ class UriTest extends TestCase
 
         self::assertNotSame($uri, $clone);
         self::assertSame('zaphyr.org', $clone->getHost());
-        //self::assertSame('https://zaphyr.org', (string)$clone);
+        self::assertSame('https://zaphyr.org', (string)$clone);
     }
 
     public function testWithHostReturnsSameInstanceWithHostIsSameAsBefore(): void
@@ -562,7 +562,7 @@ class UriTest extends TestCase
 
     public function testToStringTrimsLeadingSlashes(): void
     {
-        $uri = new Uri($url = 'http://example.org//foo');
+        $uri = new Uri('http://example.org//foo');
 
         self::assertSame('http://example.org/foo', (string)$uri);
     }

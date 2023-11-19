@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HttpMessageTests\Factories;
+namespace Zaphyr\HttpMessageTests\Unit\Factories;
 
 use Psr\Http\Message\UploadedFileInterface;
 use Zaphyr\HttpMessage\Factories\UploadedFileFactory;

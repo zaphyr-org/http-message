@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HttpMessageTests;
+namespace Zaphyr\HttpMessageTests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Zaphyr\HttpMessage\Request;
@@ -15,12 +15,12 @@ class RequestTest extends TestCase
      */
     protected Request $request;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->request = new Request(uri: 'http://example.com');
     }
 
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         unset($this->request);
     }

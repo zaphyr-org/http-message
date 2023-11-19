@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HttpMessageTests\Factories;
+namespace Zaphyr\HttpMessageTests\Unit\Factories;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;

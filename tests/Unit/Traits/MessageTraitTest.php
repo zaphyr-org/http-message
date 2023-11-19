@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HttpMessageTests\Traits;
+namespace Zaphyr\HttpMessageTests\Unit\Traits;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\StreamInterface;
@@ -21,13 +21,13 @@ class MessageTraitTest extends TestCase
      */
     protected StreamInterface $stream;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->response = new Response();
         $this->streamMock = $this->createMock(StreamInterface::class);
     }
 
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         unset($this->response, $this->streamMock);
     }

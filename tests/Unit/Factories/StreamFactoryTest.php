@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HttpMessageTests\Factories;
+namespace Zaphyr\HttpMessageTests\Unit\Factories;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\StreamInterface;
@@ -18,7 +18,7 @@ class StreamFactoryTest extends TestCase
 
     public function testCreateStream(): void
     {
-        $this->assertInstanceOf(StreamInterface::class, (new StreamFactory())->createStream());
+        self::assertInstanceOf(StreamInterface::class, (new StreamFactory())->createStream());
     }
 
     /* -------------------------------------------------
@@ -28,7 +28,7 @@ class StreamFactoryTest extends TestCase
 
     public function testCreateStreamFromFile(): void
     {
-        $this->assertInstanceOf(
+        self::assertInstanceOf(
             StreamInterface::class,
             (new StreamFactory())->createStreamFromFile('php://memory')
         );
@@ -43,7 +43,7 @@ class StreamFactoryTest extends TestCase
     {
         $resource = fopen('php://memory', 'wb+');
 
-        $this->assertInstanceOf(
+        self::assertInstanceOf(
             StreamInterface::class,
             (new StreamFactory())->createStreamFromResource($resource)
         );

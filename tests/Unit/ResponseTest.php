@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HttpMessageTests;
+namespace Zaphyr\HttpMessageTests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Zaphyr\HttpMessage\Exceptions\InvalidArgumentException;
@@ -16,12 +16,12 @@ class ResponseTest extends TestCase
      */
     protected Response $response;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->response = new Response();
     }
 
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         unset($this->response);
     }

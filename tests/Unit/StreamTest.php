@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HttpMessageTests;
+namespace Zaphyr\HttpMessageTests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Zaphyr\HttpMessage\Exceptions\InvalidArgumentException;
@@ -16,12 +16,12 @@ class StreamTest extends TestCase
      */
     protected string|null $tempFile;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->tempFile = null;
     }
 
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         if (is_string($this->tempFile) && file_exists($this->tempFile)) {
             unlink($this->tempFile);

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HttpMessageTests;
+namespace Zaphyr\HttpMessageTests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use Zaphyr\HttpMessage\Exceptions\InvalidArgumentException;
@@ -17,12 +17,12 @@ class ServerRequestTest extends TestCase
      */
     protected ServerRequest $request;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         $this->request = new ServerRequest();
     }
 
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         unset($this->request);
     }

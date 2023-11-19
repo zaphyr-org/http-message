@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zaphyr\HTTPMessageTests\Factories;
+namespace Zaphyr\HTTPMessageTests\Unit\Factories;
 
 use Psr\Http\Message\UriInterface;
 use Zaphyr\HttpMessage\Factories\UriFactory;

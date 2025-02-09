@@ -52,10 +52,10 @@ class UploadedFile implements UploadedFileInterface
      */
     public function __construct(
         $streamOrFile,
-        private readonly int|null $size,
+        private readonly ?int $size,
         private readonly int $error,
-        private readonly string|null $clientFilename = null,
-        private readonly string|null $clientMediaType = null
+        private readonly ?string $clientFilename = null,
+        private readonly ?string $clientMediaType = null
     ) {
         if ($error === UPLOAD_ERR_OK) {
             if (is_string($streamOrFile)) {

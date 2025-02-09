@@ -379,13 +379,13 @@ class Uri implements UriInterface
             [$key, $value] = $this->splitQueryValue($part);
 
             if ($value === null) {
-                $parts[$index] = $this->sanitizeQueryOrFragment($key);
+                $parts[$index] = $this->sanitizeQueryOrFragment((string)$key);
                 continue;
             }
 
             $parts[$index] = sprintf(
                 '%s=%s',
-                $this->sanitizeQueryOrFragment($key),
+                $this->sanitizeQueryOrFragment((string)$key),
                 $this->sanitizeQueryOrFragment($value)
             );
         }

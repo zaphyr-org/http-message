@@ -131,7 +131,7 @@ class UploadedFile implements UploadedFileInterface
             );
         }
 
-        if (!$this->file || empty(PHP_SAPI) || str_starts_with(PHP_SAPI, 'cli')) {
+        if (!$this->file || PHP_SAPI === 'cli') {
             $handle = fopen($targetPath, 'wb+');
 
             if ($handle === false) {

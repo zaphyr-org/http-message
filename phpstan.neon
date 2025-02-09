@@ -6,10 +6,3 @@ parameters:
     parallel:
         maximumNumberOfProcesses: 1
     treatPhpDocTypesAsCertain: false
-    ignoreErrors:
-        -
-            message: '%Parameter #1 \$value of method Zaphyr\\HttpMessage\\Uri::sanitizeQueryOrFragment\(\) expects string, string\|null given.%'
-            path: 'src/Uri.php'
-        -
-            message: '%Parameter #2 \$length of function fread expects int<0, max>, int given.%'
-            path: 'src/Stream.php'

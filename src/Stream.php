@@ -257,6 +257,7 @@ class Stream implements StreamInterface
             throw new RuntimeException('Stream is not readable');
         }
 
+        /** @var int<1, max> $length */
         $result = fread($this->resource, $length);
 
         if ($result === false) {

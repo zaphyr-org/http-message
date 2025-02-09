@@ -322,7 +322,7 @@ class StreamTest extends TestCase
         $this->expectException(RuntimeException::class);
 
         $stream = new Stream('php://memory', 'wb+');
-        $stream->seek(2);
+        $stream->seek(-1);
     }
 
     public function testSeekThrowsExceptionWhenStreamIsClosed(): void

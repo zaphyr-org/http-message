@@ -19,7 +19,7 @@ class MessageTraitTest extends TestCase
     /**
      * @var StreamInterface
      */
-    protected StreamInterface $stream;
+    protected StreamInterface $streamMock;
 
     protected function setUp(): void
     {

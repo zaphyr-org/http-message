@@ -23,7 +23,7 @@ composer require zaphyr-org/http-message
 
 ## Documentation
 
-You can read the full documentation [here](https://zaphyr.org/docs/1.x/repositories/http-message).
+You can read the full documentation [here](https://zaphyr.org/docs/repositories/latest/http-message).
 
 ## Changelog
 
@@ -31,7 +31,8 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Issues
 
-Bug reports and feature requests can be submitted on the [GitHub Issue Tracker](https://github.com/zaphyr-org/http-message/issues).
+Bug reports and feature requests can be submitted on
+the [GitHub Issue Tracker](https://github.com/zaphyr-org/http-message/issues).
 
 ## Security
 
